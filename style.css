@@ -8,13 +8,17 @@ h3 {
     font-weight: 600;
     color: #f9376c;
 }
+h2 {
+    font-size: 28px;
+}
 p {
     font-weight: 100;
-    font-size: 18px;
+    font-size: 17px;
 }
 
-.container {
+.container.first {
     padding: 0 30px;
+    box-sizing: border-box;
 }
 .navbar-default {
     border:none;
@@ -85,9 +89,11 @@ p {
 .jumbotron h1 {
     font-family: hwt-gothic-round, sans-serif;
     color: #f9376c;
+    font-size: 60px;
 }
 .jumbotron p {
     margin: 20px 0 30px 0;
+    font-size: 20px;
 }
 .app-download {
     border-radius: 10px;
@@ -114,26 +120,27 @@ div.ill-main {
     background-color: white;
     position: absolute;
     z-index:-1;
-    height: 100%;
-    right: -46%;
+    bottom: 0;
+    height: 80%;
+    right: -66%;
     width: 150%;
 }
 @media (min-width: 768px) {
     div.ill-main {
-    right: -15%;
+    right: -30%;
     width: 110%;
+    height: 100%;
     
 }}
 @media (min-width: 992px) {
     div.ill-main {
-    right: -100px;
-    width: 100%;
+    right: -25%;
     
 }}
 @media (min-width: 1200px) {
     div.ill-main {
     right: -100px;
-    min-width: 100%;
+    min-width: 95%;
     width: 130vh;
 }}
 
@@ -164,10 +171,8 @@ div.ill-main {
 
 /*CAROUSEL-MODULE*/
 .skewed-bg {
-    margin: 270px -5vw;
+    margin: 270px 0;
     background: #F0F0F0;
-    width: 110vw;
-    
     transform: skewY(3deg);
 }
 .container.unskew {
@@ -182,10 +187,6 @@ div.ill-main {
     background-image: url(assets/carota-07.svg);
     padding: 50px;
     width: 100%;
-}
-.home-carousel {
-    min-height: 500px;
-    padding: 100px 0 150px 0;
 }
 .carota.top {
     top: -150px;
@@ -207,6 +208,17 @@ div.ill-main {
 }
 
 /*carousel*/
+.home-carousel {
+    position: relative;
+    min-height: 500px;
+    padding: 100px 0 150px 0;
+    box-sizing: border-box;
+}
+.carousel {
+    padding: 0;
+    background: blu
+}
+
 a.left.carousel-control, a.right.carousel-control {
     position: absolute;
     background: none;
@@ -214,10 +226,10 @@ a.left.carousel-control, a.right.carousel-control {
     opacity: 1;
 }
 a.left.carousel-control {
-    margin-left: -100px;
+    margin-left: -9vw;
 }
 a.right.carousel-control {
-    margin-right: -100px;
+    margin-right: -9vw;
 }
 a.carousel-control .glyphicon {
     top: calc(50% - 20px);
@@ -245,26 +257,37 @@ a.carousel-control:hover .glyphicon {
     background: #FC326A;
     box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.2);
 }
-
+.carousel-img, .carousel.txt {
+    margin:0;
+    border:none;
+}
+.carousel {
+    width: 100%;
+}
 .carousel-img {
-    height: 600px;
+    height: 500px;
+    display: inline-block;
+    width: 40%;
+    padding:0;
     background-image: url(assets/iphone-1.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 .carousel-txt {
+    width: 60%;
     display: inline-block;
-    vertical-align: middle;
-    padding: 50px;
     height: auto;
-    text-align: center;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 0 50px 0 30px;
+    margin-top: 250px;
+    transform: translateY(-50%);
 }
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .carousel-txt {
-        text-align: left;
-        margin-top: 300px;
-        transform: translateY(-50%);
+        
     }
 }
 .carousel-txt h3 {

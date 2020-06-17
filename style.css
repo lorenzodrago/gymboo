@@ -1,0 +1,267 @@
+
+body {
+    margin-top:70px;
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+}
+h3 {
+    font-weight: 600;
+    color: #f9376c;
+}
+p {
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.container {
+    padding: 0 30px;
+}
+.navbar-default {
+    border:none;
+    background: white;
+    backdrop-filter: blur(4px);
+    background: rgba(255,255,255,0.9);
+    padding: 10px;
+    transition: 0.3s;    
+}
+.navbar-default.scrolled {
+    box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.08);
+}
+.btn.navbar-btn {
+    margin-right: 10px;
+    border-radius: 14px;
+    padding: 6px 15px 4px 15px;
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+    background: white;
+    font-weight: 600;
+    color: #424242;
+    transition: 0.3s;
+}
+.btn.navbar-btn.navbar-btn-menu {
+    background: none;
+    box-shadow: none;
+}
+.btn.navbar-btn.navbar-btn-menu:hover {
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+    background: white;
+}
+.btn.navbar-btn:hover {
+    box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15);
+    background: white;
+}
+.btn.navbar-btn:active, .btn.navbar-btn.navbar-btn-menu:active {
+    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1);
+    background: white;
+}
+.btn.navbar-btn.navbar-btn-menu.active {
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+    background: #f9376c;
+    color: white;
+}
+.navbar-nav li a {
+    background: blue;
+}
+.navbar-brand {
+    margin-right: 15px;
+    padding: 10px 25px;
+    height: 50px;
+}
+
+
+/*JUMBOTRON*/
+.jumbotron .container{
+    position: relative;
+    padding-bottom: 20vh;
+    vertical-align: middle;
+
+    margin: 
+    
+}
+.jumbotron {
+    position: relative;
+    background: none;
+    margin: 0px 0 0px 0;
+    height: 100vh;
+    
+}
+.jumbotron h1 {
+    font-family: hwt-gothic-round, sans-serif;
+    color: #f9376c;
+}
+.jumbotron p {
+    margin: 20px 0 30px 0;
+}
+.app-download {
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+    display: block;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.app-download:hover {
+    box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15);
+    background: white;
+}
+.app-download:active {
+    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1);
+    background: white;
+}
+img.ill-main {
+    position: absolute;
+    z-index:-1;
+    bottom: -230px;
+    height: 100%;
+    right: -270px;
+}
+@media (min-width: 768px) {
+    img.ill-main {
+    display:block;
+    height: 105%;
+    right: -400px;
+}}
+@media (min-width: 992px) {
+    img.ill-main {
+    height: 110%;
+    right: -230px;
+}}
+@media (min-width: 1200px) {
+    img.ill-main {
+    height: 120%;
+    right: -220px;
+    bottom: -200px;
+}}
+
+/*HIGHLIGHTS*/
+.highlights {
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 30px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+    overflow: auto;
+}
+.highlights:hover {
+    background: white;
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+}
+.highlights img {
+    width: 30%;
+    float: left;
+    display: block;
+    vertical-align: middle;
+}
+.highlights .description {
+    vertical-align: middle;
+    margin-left: 40%;
+}
+
+/*CAROUSEL-MODULE*/
+.skewed-bg {
+    margin: 270px -5vw;
+    background: #F0F0F0;
+    width: 110vw;
+    
+    transform: skewY(3deg);
+}
+.container.unskew {
+    transform: skewY(-3deg);
+    
+}
+
+/*carota*/
+.carota {
+    position: absolute;
+    background-size: 100% 100%;
+    background-image: url(assets/carota-07.svg);
+    padding: 50px;
+    width: 100%;
+}
+.home-carousel {
+    min-height: 500px;
+    padding: 100px 0 150px 0;
+}
+.carota.top {
+    top: -150px;
+    background-image: url(assets/carota-07.svg);
+    color: #FC326A;
+}
+.carota.bottom {
+    bottom: -150px;
+    background-image: url(assets/carota-08.svg);
+    color: #20A0A0;
+}
+.carota h2 {
+    width: 65%;
+    min-width: 400px;
+    margin: auto;
+}
+.carota h2 b {
+    color: #424242;
+}
+
+/*carousel*/
+a.left.carousel-control, a.right.carousel-control {
+    position: absolute;
+    background: none;
+    text-shadow: none;
+    opacity: 1;
+}
+a.left.carousel-control {
+    margin-left: -100px;
+}
+a.right.carousel-control {
+    margin-right: -100px;
+}
+a.carousel-control .glyphicon {
+    top: calc(50% - 20px);
+    color: #5A676B;
+    vertical-align: middle;
+    font-size: 40px;
+    transition: 0.3s;
+}
+a.carousel-control:hover .glyphicon {
+    color: #FC326A;
+}
+.carousel-indicators {
+    margin-bottom: -70px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+    width: 18px;
+    height: 18px;
+    margin: 0 5px;
+    background: white;
+    border: none;
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+.carousel-indicators li.active {
+    background: #FC326A;
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.2);
+}
+
+.carousel-img {
+    height: 600px;
+    background-image: url(assets/iphone-1.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.carousel-txt {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 50px;
+    height: auto;
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .carousel-txt {
+        text-align: left;
+        margin-top: 300px;
+        transform: translateY(-50%);
+    }
+}
+.carousel-txt h3 {
+    margin-bottom: 20px;
+}

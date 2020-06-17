@@ -71,17 +71,15 @@ p {
 /*JUMBOTRON*/
 .jumbotron .container{
     position: relative;
-    padding-bottom: 20vh;
+    height: 100%;
     vertical-align: middle;
-
-    margin: 
-    
 }
 .jumbotron {
     position: relative;
     background: none;
     margin: 0px 0 0px 0;
-    height: 100vh;
+    height: calc(100vh - 70px);
+    padding: 50px 0 40px 0;
     
 }
 .jumbotron h1 {
@@ -98,6 +96,7 @@ p {
     margin: 15px 0;
     cursor: pointer;
     transition: 0.3s;
+    background: white;
 }
 .app-download:hover {
     box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15);
@@ -107,29 +106,35 @@ p {
     box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1);
     background: white;
 }
-img.ill-main {
+div.ill-main {
+    background-image: url(assets/ill-main.png);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: white;
     position: absolute;
     z-index:-1;
-    bottom: -230px;
     height: 100%;
-    right: -270px;
+    right: -46%;
+    width: 150%;
 }
 @media (min-width: 768px) {
-    img.ill-main {
-    display:block;
-    height: 105%;
-    right: -400px;
+    div.ill-main {
+    right: -15%;
+    width: 110%;
+    
 }}
 @media (min-width: 992px) {
-    img.ill-main {
-    height: 110%;
-    right: -230px;
+    div.ill-main {
+    right: -100px;
+    width: 100%;
+    
 }}
 @media (min-width: 1200px) {
-    img.ill-main {
-    height: 120%;
-    right: -220px;
-    bottom: -200px;
+    div.ill-main {
+    right: -100px;
+    min-width: 100%;
+    width: 130vh;
 }}
 
 /*HIGHLIGHTS*/

@@ -183,12 +183,12 @@ div.ill-main {
     transform: skewY(-3deg);  
 }
 .carousel-container {
-    margin: 270px auto;
+    margin: 250px auto;
     position: relative;
 }
 .carousel-background {
     background: #F0F0F0;
-    height: 750px;
+    height: 780px;
     position: absolute;
     top: 0;
     width: 100%;
@@ -226,7 +226,7 @@ div.ill-main {
 .home-carousel {
     position: relative;
     min-height: 500px;
-    padding: 100px 0 150px 0;
+    padding: 50px 0 100px 0;
     box-sizing: border-box;
 }
 .carousel {
@@ -241,10 +241,10 @@ a.left.carousel-control, a.right.carousel-control {
     opacity: 1;
 }
 a.left.carousel-control {
-    margin-left: -9vw;
+    margin-left: -10px;
 }
 a.right.carousel-control {
-    margin-right: -9vw;
+    margin-right: -10px;
 }
 a.carousel-control .glyphicon {
     top: calc(50% - 20px);
@@ -280,29 +280,58 @@ a.carousel-control:hover .glyphicon {
     width: 100%;
 }
 .carousel-img {
-    height: 500px;
+    height: 400px;
     display: inline-block;
-    width: 40%;
     padding:0;
-    background-image: url(assets/iphone-1.png);
+    background-image: url(assets/carosello/carosello-home-1.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     box-sizing: border-box;
+    width: 100%;
+}
+
+#car-home-1 {
+    background-image: url(assets/carosello/carosello-home-1.png);
+}
+#car-home-2 {
+    background-image: url(assets/carosello/carosello-home-2.png);
+}
+#car-home-3 {
+    background-image: url(assets/carosello/carosello-home-3.png);
+}
+#car-home-4 {
+    background-image: url(assets/carosello/carosello-home-4.png);
 }
 .carousel-txt {
     width: 60%;
     display: inline-block;
-    height: auto;
     vertical-align: top;
     box-sizing: border-box;
     padding: 0 50px 0 30px;
-    margin-top: 250px;
-    transform: translateY(-50%);
+    width: 100%;
+    margin-top: 20px;
+    height: 170px;
 }
 @media (min-width: 768px) {
+    .carousel-img {
+        width: 40%;
+        height: 540px;
+    }
     .carousel-txt {
-        
+        height: auto;
+        width: 60%;
+        margin-top: 270px;
+        transform: translateY(-50%);
+    }
+    .carousel-background {
+        height: 700px;
+    }
+    a.left.carousel-control {
+        margin-left: -9vw;
+    }
+    a.right.carousel-control {
+        margin-right: -9vw;
     }
 }
 .carousel-txt h3 {
@@ -345,6 +374,11 @@ a.carousel-control:hover .glyphicon {
     text-decoration: none;
     color: #FA7D9F;
 }
+@keyframes bounce {
+  0%   {transform: scale(1);}
+  50%  {transform: scale(1.05);}
+  100%  {transform: scale(1);}
+}
 .choice-img {
     bottom: 0;
     position: absolute;
@@ -356,6 +390,18 @@ a.carousel-control:hover .glyphicon {
     background-position: bottom;
     background-repeat: no-repeat;
     box-sizing: border-box;
+    transform-origin: 50% 100%;
+    animation-timing-function: ease-in-out;
+}
+.choice-img.animated {
+    animation-name: bounce;
+    animation-duration: 0.7s;
+}
+.choice.col-xs-12.pressed {
+    box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15);
+}
+.choice.col-xs-12.depressed {
+    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.07);
 }
 .choice-img.right {
     background-image: url(assets/home-btn-09.svg);

@@ -176,8 +176,19 @@ div.ill-main {
     transform: skewY(3deg);
 }
 .container.unskew {
-    transform: skewY(-3deg);
-    
+    transform: skewY(-3deg);  
+}
+.carousel-container {
+    margin: 270px auto;
+    position: relative;
+}
+.carousel-background {
+    background: #F0F0F0;
+    height: 750px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: skewY(3deg);
 }
 
 /*carota*/

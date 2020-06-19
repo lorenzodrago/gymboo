@@ -381,9 +381,9 @@ a.carousel-control:hover .glyphicon {
     color: #FA7D9F;
 }
 @keyframes bounce {
-  0%   {transform: scale(1);}
-  50%  {transform: scale(1.05);}
-  100%  {transform: scale(1);}
+  0%   {transform: scale(1,1);}
+  50%  {transform: scale(1.03,1.05);}
+  100%  {transform: scale(1,1);}
 }
 .choice-img {
     bottom: 0;

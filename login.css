@@ -5,6 +5,12 @@ body.login {
 body.login .footer {
     margin: 0;
 }
+body.login .navbar-default {
+    background-color: #F0F0F0;
+}
+body.login .navbar-default.scrolled {
+    background-color: rgba(255,255,255,0.9);
+}
 .login-container {
     height: 100vh;
     width: 100%;
@@ -13,8 +19,8 @@ body.login .footer {
 .login-box {
     position: absolute;
     width: 600px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.1);
     background: white;
     max-width: 100%;
     top: 50%;
@@ -68,12 +74,11 @@ body.login .footer {
     border-radius: 10px;
     border: none;
     box-shadow: none;
-    transition: 0.5s;
-    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1), 0px 3px 8px 0px rgba(0,0,0,0.0) ;
+    transition: 0.3s;
+    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1), 0px 3px 1px 0px rgba(0,0,0,0.0) ;
 }
 .login-box .form-group input:focus {
-    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1) ;
-    animation: tofocus 0.5s;
+    box-shadow: inset 0px 3px 1px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1) ;
     border: none;
 }
 .custom-checkbox .span {

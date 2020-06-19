@@ -51,26 +51,26 @@ p {
     border-radius: 14px;
     padding: 6px 15px 4px 15px;
     box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
-    background: white;
+    background: rgba(255,255,255,0.1);
     font-weight: 600;
     color: #424242;
     transition: 0.2s;
-    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1) ;
+    box-shadow: inset 0px 3px 1px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1) ;
 }
 .btn.navbar-btn.navbar-btn-menu {
     background: none;
     box-shadow: none;
 }
 .btn.navbar-btn.navbar-btn-menu:hover {
-    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 3px 1px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1) ;
     background: white;
 }
 .btn.navbar-btn:hover {
-    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.0), 0px 3px 12px 0px rgba(0,0,0,0.15) ;
+    box-shadow: inset 0px 3px 1px 0px rgba(0,0,0,0.0), 0px 3px 12px 0px rgba(0,0,0,0.15) ;
     background: white;
 }
 .btn.navbar-btn:active, .btn.navbar-btn.navbar-btn-menu:active {
-    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1), 0px 3px 8px 0px rgba(0,0,0,0.0);
+    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1), 0px 3px 1px 0px rgba(0,0,0,0.0);
     background: white;
 }
 .btn.navbar-btn.navbar-btn-menu.active {
@@ -384,7 +384,7 @@ a.carousel-control:hover .glyphicon {
     transition: 0.3s;
     overflow: auto;
     background: white;
-    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 2px 6px 0px rgba(0,0,0,0.1), 0px 0px 1px 1px rgba(0,0,0,0.0) ;
     overflow: visible;
 }
 .choice-txt {
@@ -431,10 +431,10 @@ a.carousel-control:hover .glyphicon {
     animation-duration: 0.7s;
 }
 .choice.col-xs-12.pressed {
-    box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15);
+    box-shadow: inset 0px 3px 1px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1) ;
 }
 .choice.col-xs-12.depressed {
-    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.07);
+    box-shadow: inset 0px 2px 6px 0px rgba(0,0,0,0.1), 0px 0px 0px 1px rgba(0,0,0,0.0) ;
 }
 .choice-img.right {
     background-image: url(assets/home-btn-09.svg);

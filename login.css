@@ -1,0 +1,87 @@
+body.login {
+    background-color: #F0F0F0;
+    margin: 0;
+}
+body.login .footer {
+    margin: 0;
+}
+.login-container {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+.login-box {
+    position: absolute;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+    background: white;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 40px 60px;
+}
+.login-box h2 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #424242;
+}
+.login-box h2 b {
+    font-weight: 600;
+    color: #f9376c;
+}
+.login-box .btn {
+    margin: 20px 0 5px 0;
+    border-radius: 14px;
+    padding: 6px 17px 4px 17px;
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+    background: #f9376c;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s;
+    border: none;
+}
+.login-box .btn:hover {
+    background: #FA7D9F;
+    box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15);
+}
+.login-box label, .login-box p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 15px 0 8px 0;
+}
+.login-box p b {
+    color: #f9376c;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.login-box p b:hover {
+    color: #FA7D9F;
+}
+.login-box .form-group input {
+    padding: 23px 18px;
+    font-weight: 300;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: none;
+    transition: 0.5s;
+    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1), 0px 3px 8px 0px rgba(0,0,0,0.0) ;
+}
+.login-box .form-group input:focus {
+    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1) ;
+    animation: tofocus 0.5s;
+    border: none;
+}
+.custom-checkbox .span {
+    width: 100px;
+    background: blue;
+}
+@keyframes tofocus {
+    0% { box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1), 0px 3px 8px 0px rgba(0,0,0,0.0) ; }
+    50% { box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.0), 0px 0px 8px 0px rgba(0,0,0,0.1) ; }
+    100% { box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1) ; }
+}

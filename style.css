@@ -11,15 +11,25 @@ h4 {
 h3 {
     font-weight: 600;
     color: #f9376c;
+    font-size: 20 px;
 }
 h2 {
-    font-size: 28px;
+    font-size: 23px;
 }
 p {
     font-weight: 100;
-    font-size: 17px;
 }
-
+@media (min-width:768px){
+    p {
+        font-size: 17px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+}
 .container.first {
     padding: 0 30px;
     box-sizing: border-box;
@@ -27,13 +37,14 @@ p {
 .navbar-default {
     border:none;
     background: white;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px) saturate(1.5);
     background: rgba(255,255,255,0.9);
     padding: 10px;
     transition: 0.3s;    
 }
 .navbar-default.scrolled {
     box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.08);
+    background: rgba(255,255,255,0.9);
 }
 .btn.navbar-btn {
     margin-right: 10px;
@@ -43,7 +54,8 @@ p {
     background: white;
     font-weight: 600;
     color: #424242;
-    transition: 0.3s;
+    transition: 0.2s;
+    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1) ;
 }
 .btn.navbar-btn.navbar-btn-menu {
     background: none;
@@ -54,11 +66,11 @@ p {
     background: white;
 }
 .btn.navbar-btn:hover {
-    box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15);
+    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.0), 0px 3px 12px 0px rgba(0,0,0,0.15) ;
     background: white;
 }
 .btn.navbar-btn:active, .btn.navbar-btn.navbar-btn-menu:active {
-    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1), 0px 3px 8px 0px rgba(0,0,0,0.0);
     background: white;
 }
 .btn.navbar-btn.navbar-btn-menu.active {
@@ -84,10 +96,12 @@ p {
 }
 .jumbotron {
     position: relative;
+    overflow: hidden;
     background: none;
     margin: 0px 0 0px 0;
     height: calc(100vh - 70px);
     padding: 50px 0 40px 0;
+    min-height: 768px;
     
 }
 .jumbotron h1 {
@@ -101,7 +115,7 @@ p {
 }
 .app-download {
     border-radius: 10px;
-    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 3px 1px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1);
     display: block;
     margin: 15px 0;
     cursor: pointer;
@@ -109,11 +123,11 @@ p {
     background: white;
 }
 .app-download:hover {
-    box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.15);
+    box-shadow: inset 0px 3px 1px 0px rgba(0,0,0,0.0), 0px 3px 12px 0px rgba(0,0,0,0.15);
     background: white;
 }
 .app-download:active {
-    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1), 0px 3px 1px 0px rgba(0,0,0,0.0);
     background: white;
 }
 div.ill-main {
@@ -128,6 +142,12 @@ div.ill-main {
     height: 80%;
     right: -66%;
     width: 150%;
+    display: none;
+}
+@media (min-width: 768px) {
+    div.ill-main {
+        display: block;
+    }
 }
 @media (min-width: 768px) {
     div.ill-main {
@@ -143,9 +163,10 @@ div.ill-main {
 }}
 @media (min-width: 1200px) {
     div.ill-main {
-    right: -100px;
-    min-width: 95%;
-    width: 130vh;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 95%;
+        width: 130vh;
 }}
 
 /*HIGHLIGHTS*/
@@ -200,7 +221,7 @@ div.ill-main {
     position: absolute;
     background-size: 100% 100%;
     background-image: url(assets/carota-07.svg);
-    padding: 50px;
+    padding: 50px 0;
     width: 100%;
 }
 .carota.top {
@@ -214,9 +235,14 @@ div.ill-main {
     color: #20A0A0;
 }
 .carota h2 {
-    width: 65%;
-    min-width: 400px;
-    margin: auto;
+    margin: 0 20px;
+}
+@media (min-width: 768px) {
+    .carota h2 {
+        width: 65%;
+        min-width: 400px;
+        margin: auto;
+    }
 }
 .carota h2 b {
     color: #424242;
@@ -227,6 +253,7 @@ img.doodle {
     width: 80px;
 }
 /*carousel*/
+
 .home-carousel {
     position: relative;
     min-height: 500px;
@@ -235,7 +262,7 @@ img.doodle {
 }
 .carousel {
     padding: 0;
-    background: blu
+    background: none;
 }
 
 a.left.carousel-control, a.right.carousel-control {

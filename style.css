@@ -221,7 +221,11 @@ div.ill-main {
 .carota h2 b {
     color: #424242;
 }
-
+/*doodles*/
+img.doodle {
+    position: absolute;
+    width: 80px;
+}
 /*carousel*/
 .home-carousel {
     position: relative;
@@ -312,6 +316,7 @@ a.carousel-control:hover .glyphicon {
     width: 100%;
     margin-top: 20px;
     height: 170px;
+    text-align: center
 }
 @media (min-width: 768px) {
     .carousel-img {
@@ -323,15 +328,16 @@ a.carousel-control:hover .glyphicon {
         width: 60%;
         margin-top: 270px;
         transform: translateY(-50%);
+        text-align: left;
     }
     .carousel-background {
         height: 700px;
     }
     a.left.carousel-control {
-        margin-left: -9vw;
+        margin-left: -7vw;
     }
     a.right.carousel-control {
-        margin-right: -9vw;
+        margin-right: -7vw;
     }
 }
 .carousel-txt h3 {

@@ -26,3 +26,15 @@ $('.choice.bottom').mouseleave(function(){
     $('.choice.bottom').removeClass('pressed');
     $('.choice.top').removeClass('depressed');
 });
+
+let checked=0;
+$('.checkbox').click(function() {
+    if(checked==0) {
+        $('.checkbox').addClass('checked');
+        checked = 1;
+    } else {
+        $('.checkbox').removeClass('checked');
+        checked = 0;
+    }
+    
+})

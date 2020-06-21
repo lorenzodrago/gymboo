@@ -45,44 +45,107 @@ p {
     background: white;
     backdrop-filter: blur(4px) saturate(1.5);
     background: rgba(255,255,255,0.9);
-    padding: 10px;
     transition: 0.3s;    
+}
+.navbar-default .navbar-collapse {
+    border-bottom: 1px solid rgba(230,230,230,0.7);    
 }
 .navbar-default.scrolled {
     box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.08);
     background: rgba(255,255,255,0.9);
 }
 .btn.navbar-btn {
-    margin-right: 10px;
-    border-radius: 14px;
-    padding: 6px 15px 4px 15px;
-    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
-    background: rgba(255,255,255,0.1);
-    font-weight: 600;
-    color: #424242;
-    transition: 0.2s;
-    box-shadow: inset 0px 3px 1px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1) ;
-}
-.btn.navbar-btn.navbar-btn-menu {
     background: none;
-    box-shadow: none;
+    font-size: 17px;
+    margin: 0px;
+    padding: 10px 23px;
+    border-radius: 0;
+    /*border-top: 1px solid rgba(230,230,230,0.7);*/
+    width: 100%;
+    text-align: left;
 }
-.btn.navbar-btn.navbar-btn-menu:hover {
-    box-shadow: inset 0px 3px 1px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1) ;
-    background: white;
+.btn.navbar-btn.active, .btn.navbar-btn:active  {
+    border-radius: 20px;
 }
-.btn.navbar-btn:hover {
-    box-shadow: inset 0px 3px 1px 0px rgba(0,0,0,0.0), 0px 3px 12px 0px rgba(0,0,0,0.15) ;
-    background: white;
+.navbar-nav {
+    margin: 7.5px -15px;
+    margin: 0;
 }
-.btn.navbar-btn:active, .btn.navbar-btn.navbar-btn-menu:active {
-    box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1), 0px 3px 1px 0px rgba(0,0,0,0.0);
-    background: white;
+.navbar-collapse {
+    border: none;
 }
-.btn.navbar-btn.navbar-btn-menu.active {
-    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
-    background: #f9376c;
+.navbar-header {
+    padding: 5px 0;
+}
+button.navbar-toggle {
+    border: none;
     color: white;
+    padding: 0 5px;
+    margin: 6px 17px;
+}
+button.navbar-toggle.collapsed:hover, button.navbar-toggle.collapsed:active, button.navbar-toggle.collapsed:focus {
+    background: none;
+}
+button.navbar-toggle:hover, button.navbar-toggle:active, button.navbar-toggle:focus {
+    background: none;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background: #f9376c;
+    width: 30px;
+    height: 4px;
+    margin: 6px 0;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .navbar-default .navbar-collapse {
+        border: none;    
+    }
+    .navbar-nav {
+        margin: 7.5px -15px;
+    }
+    .navbar-header {
+         padding: 0;
+    }
+    .navbar-default {
+        padding: 10px;
+        border: none;
+    }
+    .btn.navbar-btn {
+        width: auto;
+        text-align: center;
+        font-size: 14px;
+        margin-right: 10px;
+        border-radius: 14px;
+        padding: 6px 15px 4px 15px;
+        box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+        background: rgba(255,255,255,0.1);
+        font-weight: 600;
+        color: #424242;
+        transition: 0.2s;
+        box-shadow: inset 0px 3px 1px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1) ;
+    }
+    .btn.navbar-btn.navbar-btn-menu {
+        background: none;
+        box-shadow: none;
+    }
+    .btn.navbar-btn.navbar-btn-menu:hover {
+        box-shadow: inset 0px 3px 1px 0px rgba(0,0,0,0.0), 0px 3px 8px 0px rgba(0,0,0,0.1) ;
+        background: white;
+    }
+    .btn.navbar-btn:hover {
+        box-shadow: inset 0px 3px 1px 0px rgba(0,0,0,0.0), 0px 3px 12px 0px rgba(0,0,0,0.15) ;
+        background: white;
+    }
+    .btn.navbar-btn:active, .btn.navbar-btn.navbar-btn-menu:active {
+        box-shadow: inset 0px 3px 8px 0px rgba(0,0,0,0.1), 0px 3px 1px 0px rgba(0,0,0,0.0);
+        background: white;
+    }
+    .btn.navbar-btn.navbar-btn-menu.active {
+        box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
+        background: #f9376c;
+        color: white;
+    }
 }
 .navbar-nav li a {
     background: blue;
@@ -210,7 +273,7 @@ div.ill-main {
     transform: skewY(-3deg);  
 }
 .carousel-container {
-    margin: 250px auto;
+    margin: 200px auto 170px auto;
     position: relative;
 }
 .carousel-background {
@@ -294,7 +357,7 @@ a.carousel-control:hover .glyphicon {
     color: #FC326A;
 }
 .carousel-indicators {
-    margin-bottom: -70px;
+    margin-bottom: -35px;
 }
 .carousel-indicators li, .carousel-indicators li.active {
     width: 18px;
@@ -303,7 +366,7 @@ a.carousel-control:hover .glyphicon {
     background: white;
     border: none;
     box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .carousel-indicators li.active {
     background: #FC326A;
@@ -325,7 +388,8 @@ a.carousel-control:hover .glyphicon {
     background-position: center;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    width: 100%;
+    width: 90%;
+    margin: 0 5%;
 }
 
 #car-home-1 {
@@ -341,22 +405,29 @@ a.carousel-control:hover .glyphicon {
     background-image: url(assets/carosello/carosello-home-4.png);
 }
 .carousel-txt {
-    width: 60%;
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
-    padding: 0 50px 0 30px;
+    padding: 0 15px;
     width: 100%;
-    margin-top: 20px;
+    margin-top: -20px;
     height: 170px;
     text-align: center
 }
 @media (min-width: 768px) {
+    .carousel-container {
+        margin: 250px auto;
+        position: relative;
+    }
+    .carousel-indicators {
+        margin-bottom: -70px;
+    }
     .carousel-img {
         width: 40%;
         height: 540px;
     }
     .carousel-txt {
+        padding: 0 50px 0 30px;
         height: auto;
         width: 60%;
         margin-top: 270px;
@@ -397,6 +468,7 @@ a.carousel-control:hover .glyphicon {
     display: inline-block;
     width: 60%;
     max-width: 500px;
+    padding-right: 0px;
 }
 .choice-txt p {
     margin: 20px 0;
@@ -448,15 +520,26 @@ a.carousel-control:hover .glyphicon {
 }
 .choice-img.left {
     background-image: url(assets/home-btn-10.svg);
-    left: 5%;
+    right: 5%;
 }
-.choice-txt.left {
+.choice-txt.left, .choice-txt.right {
     margin-left: 4%;
 }
-.choice-txt.right {
-    margin-left: 40%;
+@media (min-width: 500px) {
+    .choice-txt {
+        padding-right: 20px;
+    }
 }
-
+@media (min-width: 666px) {
+    
+    .choice-img.left {
+        background-image: url(assets/home-btn-10.svg);
+        left: 5%;
+    }
+    .choice-txt.right {
+        margin-left: 40%;
+    }
+}
 /*FOOTER*/
 .footer.container-fluid {
     background: #FC326A;
@@ -488,7 +571,10 @@ a.carousel-control:hover .glyphicon {
     margin-top: 10px;
 }
 .footer .app-download {
-    margin-left: auto;
-    transform: scale(0.9);
     box-shadow: none;
+}
+@media (min-width:768px) {
+    .footer .app-download {
+        margin-left: auto;
+    }
 }

@@ -38,3 +38,23 @@ $('.checkbox').click(function() {
     }
     
 })
+
+$("#loginform").submit(function(e) {
+    e.preventDefault();
+    var password = $("#pwInput").val();
+    var email = $("#emailInput").val();
+    if (email.length==0) {
+        $('#loginerror p').text("Devi compilare il campo e-mail.");
+    }
+    if (password.length==0) {
+        $('#loginerror p').text("Password mancante.");
+    }
+    if (email.length==0&&password.length==0) {
+        $('#loginerror p').text("Devi compilare i campi richiesti.");
+    }
+    if (email.length>0&&password.length>0) {
+        $('#loginerror p').text("Credenziali di accesso errate.");
+    }
+    $('#loginerror').removeClass("hideError");
+    setTimeout(function(){$('#loginerror').addClass("hideError");},5000);
+});

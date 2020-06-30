@@ -4,6 +4,7 @@ body {
     font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
 }
+
 h4 {
     font-weight: 400;
     color: #f9376c;
@@ -287,6 +288,7 @@ div.ill-main {
     width: 100%;
     transform: skewY(3deg);
     z-index: -10;
+    outline: 1px solid transparent;
 }
 
 /*carota*/

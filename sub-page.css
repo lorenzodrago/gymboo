@@ -81,6 +81,7 @@ img.blot {
     position: absolute;
     transform: skewY(3deg);
     background: white;
+    outline: 1px solid transparent;
 }
 .tilt-bg.grey {
     background: #F0F0F0;

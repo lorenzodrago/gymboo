@@ -58,3 +58,54 @@ $("#loginform").submit(function(e) {
     $('#loginerror').removeClass("hideError");
     setTimeout(function(){$('#loginerror').addClass("hideError");},5000);
 });
+
+
+$(window).scroll(function(){
+            scrollElements();
+        });
+        function scrollElements() {
+            var scroll = $(window).scrollTop();
+            
+            $(".tilt-bg").each(function(){
+                var _offset = $(this).next().offset();
+                var _transform = scroll - _offset.top;
+                if (_transform>(28-140)*5) {
+                    _transform=(28-140)*5;
+                }
+                $(this).css({
+                    
+                    "transform": "translateY("+(140+(_transform/5))+"px) skewY("+(-_transform/200)+"deg)"
+                });
+            })
+            $(".tilt-bg.grey").each(function(){
+                var _offset = $(this).next().offset();
+                var _transform = scroll - _offset.top;
+                if (_transform>(28-160)*5) {
+                    _transform=(28-160)*5;
+                }
+                $(this).css({
+                    
+                    "transform": "translateY("+(160+(_transform/5))+"px) skewY("+(_transform/200)+"deg)"
+                });
+            })
+            $(".carousel-background").each(function(){
+                var _offset = $(this).next().offset();
+                var _transform = scroll - _offset.top;
+                $(this).css({
+                    
+                    "transform": "translateY("+(40+(_transform/5))+"px) skewY("+(3+_transform/200)+"deg)"
+                });
+            })
+            $(".image").each(function(){
+                var _offset = jQuery("img", this).offset();
+                var _transform = scroll - _offset.top;
+                if (_transform>(28-140)*6) {
+                    _transform=(28-140)*6;
+                }
+                $(this).css({
+                    
+                    "transform": "translateY("+(140+(_transform/6))+"px)"
+                });
+            })
+        }
+        scrollElements();

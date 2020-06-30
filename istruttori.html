@@ -2,18 +2,24 @@
 <html lang="it">
 
 <head>
+    <link rel="icon" href="favicon-b.png" type="image/png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gymboo - Come in palestra, con i tuoi amici</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/fcd6dev.css">
+    
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sub-page.css">
 </head>
 
-<body>
+<body class="sub-page">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -32,21 +38,88 @@
                 <li><button class="btn navbar-btn navbar-btn-menu active" onfocus="this.blur();">Istruttori</button></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-            <li><button class="btn navbar-btn" onfocus="this.blur();">Scarica l'App</button></li>
-            <li><button onclick="location.href='login.html';" class="btn navbar-btn" onfocus="this.blur();">Accedi</button></li>
+            <li><button class="btn navbar-btn navbar-btn-dl" onfocus="this.blur();">Scarica l'App</button></li>
+            <li><button onclick="location.href='login.html';" class="btn navbar-btn navbar-btn-dl" onfocus="this.blur();">Accedi</button></li>
             </ul>
             </div>
         </div>
     </nav>
+    <img class="img-fluid blot" src="assets/blot.svg">
     <div class="jumbotron">
         <div class="container first">
-            <div class="ill-main"></div>
+            
+            <div class="ill-main istruttori"></div>
             <h1>Sei nel posto<br>giusto.</h1>
-            <p>Con Gymboo puoi offrire i tuoi corsi online<br>a migliaia di sportivi dove vuoi, quando vuoi,<br>come vuoi.</p> 
-            <img class="app-download" src="assets/badge-playstore.svg" height="60">
-            <img class="app-download" src="assets/badge-appstore.svg" height="60">
+            <p>Con Gymboo puoi offrire i tuoi corsi online<br> a migliaia di sportivi dove vuoi,<br> quando vuoi, come vuoi.</p> 
         </div>
     </div>
+    <div class="container sub-content">
+        <div class="row">
+        <div class="col-sm-5 text">
+            <h3>Gestisci i corsi e crea i tuoi piani di allenamento</h3>
+            <p>Gymboo ti permette di creare corsi personalizzati, e di programmare lezioni in modo semplice e veloce.<br>Potrai offrire diverse tipologie di abbonamento e tenerne controllati i pagamenti.</p>
+        </div>
+        <div class="col-sm-7 image">
+            <img class="img-fluid right" src="assets/sportivi/web-illu-06.png">
+        </div>
+        </div>
+    </div>
+    <div id="tilt-1" class="tilt-bg grey"></div>
+    <div id="tilt-1-inside" class="container sub-content">
+        <div class="row">
+        <div class="col-sm-7 image visible-custom">
+            <img class="img-fluid left" src="assets/sportivi/web-illu-07.png">
+        </div>
+        <div class="col-sm-5 text">
+            <h3>Controlla ogni aspetto della lezione grazie alle funzionalità integrate</h3>
+            <p>Monitora comodamente l’avanzamento degli esercizi con la funzionalità timer.<br>Grazie al collegamento con Spotify puoi caricare i tuoi iscritti con la musica giusta.</p>
+        </div>
+        <div class="col-sm-7 image hidden-custom">
+            <img class="img-fluid right" src="assets/sportivi/web-illu-07.png">
+        </div>
+        </div>
+    </div>
+    <div class="tilt-bg"></div>
+    <div class="container sub-content">
+        <div class="row">
+        <div class="col-sm-5 text">
+            <h3>Salva i momenti più importanti per rivederli con i tuoi iscritti</h3>
+            <p>Osserva lo svolgimento degli esercizi commentandoli in diretta grazie ai canali vocali. <br> Rivivi insieme alla tua classe tutti i momenti più intensi con la funzionalità live photo! </p>
+        </div>
+        <div class="col-sm-7 image">
+            <img class="img-fluid right" src="assets/sportivi/web-illu-08.png">
+        </div>
+        </div>
+    </div>
+    <div class="tilt-bg grey"></div>
+    <div class="container sub-content">
+        <div class="row">
+        <div class="col-sm-8 image visible-custom" >
+            <img class="img-fluid left" style="max-height: 115%;" src="assets/sportivi/web-illu-09.png">
+        </div>
+        <div class="col-sm-4 text">
+            <h3>Rimani sempre in contatto con i tuoi iscritti</h3>
+            <p>Comunica con loro in qualsiasi momento grazie alle chat dedicate ai tuoi corsi e al sistema di notifiche per tenersi sempre aggiornati sulle lezioni in programma.</p>
+        </div>
+        <div class="col-sm-7 image hidden-custom">
+            <img class="img-fluid right" src="assets/sportivi/web-illu-09.png">
+        </div>
+        </div>
+    </div>
+    <div class="tilt-bg"></div>
+    <div class="container sub-content">
+        <div class="row">
+        <div class="col-sm-5 text">
+            <h3>Cura il tuo profilo pubblico e raccogli feedback</h3>
+            <p>Il tuo profilo è una vetrina sul mondo degli sportivi di Gymboo. Diventa partner e metti in mostra le tue qualifiche, ricevi feedback dai tuoi iscritti e pubblica post sul tuo feed.</p>
+        </div>
+        <div class="col-sm-7 image">
+            <img class="img-fluid right" src="assets/sportivi/web-illu-10.png">
+        </div>
+        </div>
+    </div>
+    
+    
     <div class="footer container-fluid">
         <div class="inner-footer container">
             <div class="row">
@@ -80,7 +153,11 @@
             </div>
         </div>
     </div>
-
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+        
+        
+    </script>
 </body>
 
 </html>

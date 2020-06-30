@@ -108,8 +108,13 @@ img.blot {
     margin-top: 60px;
     height: auto;
 }
+.card-container-container {
+    overflow: hidden;
+}
 .card-container {
     padding: 0 30px;
+    position: relative;
+    height: 430px;
 }
 .card-slider {
     margin: 0px 0;
@@ -168,6 +173,33 @@ img.blot {
 .sub-page .footer {
     margin-top: 160px;
 }
+.prev, .next {
+    display: none !important;
+    position: absolute;
+    top: 165px;
+}
+@media (min-width: 1260px) {
+    .prev, .next {
+        display: block !important;
+    }
+}
+.prev {
+    left: -30px;
+}
+.next {
+    right: -30px;
+}
+.prev .glyphicon, .next .glyphicon {
+    
+    color: #5A676B;
+    vertical-align: middle;
+    font-size: 40px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.prev:hover .glyphicon, .next:hover .glyphicon {
+    color: #FC326A;
+}
 
 /*JUMBOTRON*/
 .ill-main.istruttori {
@@ -189,5 +221,21 @@ img.blot {
         transform: translateX(-50%);
         min-width: 110%;
         width: 110vh;
+    }
+}
+@media (min-width: 768px) {
+    div.ill-main.istruttori {
+        right: -20%;
+        width: 110%;
+        height: 85%;
+        bottom: 50px;
+    
+    }
+    div.ill-main.sportivi {
+        right: -10%;
+        width: 110%;
+        height: 85%;
+        bottom: 50px;
+    
     }
 }

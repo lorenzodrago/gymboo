@@ -5,6 +5,17 @@ $(function () {
   });
 });
 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    $(".navbar-default").css("top","-0px");
+  } else if ($(window).scrollTop()>$(window).height()) {
+    $(".navbar-default").css("top","-80px");
+  }
+  prevScrollpos = currentScrollPos;
+} 
+
 
 $('.choice.top').mouseenter(function(){   
     $('.choice.top').addClass('pressed');
@@ -69,23 +80,36 @@ $(window).scroll(function(){
             $(".tilt-bg").each(function(){
                 var _offset = $(this).next().offset();
                 var _transform = scroll - _offset.top;
+                var skew = -_transform/200;
+                if (skew > 4) {
+                    skew = 4
+                } else if (skew<-4) {
+                    skew= -4;
+                }
                 if (_transform>(28-140)*5) {
                     _transform=(28-140)*5;
                 }
+                
                 $(this).css({
                     
-                    "transform": "translateY("+(140+(_transform/5))+"px) skewY("+(-_transform/200)+"deg)"
+                    "transform": "translateY("+(140+(_transform/5))+"px) skewY("+skew+"deg)"
                 });
             })
             $(".tilt-bg.grey").each(function(){
                 var _offset = $(this).next().offset();
                 var _transform = scroll - _offset.top;
+                var skew = _transform/200;
+                if (skew > 4) {
+                    skew = 4
+                } else if (skew<-4) {
+                    skew= -4;
+                }
                 if (_transform>(28-160)*5) {
                     _transform=(28-160)*5;
                 }
                 $(this).css({
                     
-                    "transform": "translateY("+(160+(_transform/5))+"px) skewY("+(_transform/200)+"deg)"
+                    "transform": "translateY("+(160+(_transform/5))+"px) skewY("+skew+"deg)"
                 });
             })
             $(".carousel-background").each(function(){

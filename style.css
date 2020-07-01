@@ -172,7 +172,7 @@ button.navbar-toggle:hover, button.navbar-toggle:active, button.navbar-toggle:fo
     position: relative;
     overflow: hidden;
     background: none;
-    margin: 120px 0;
+    /*margin: 120px 0;*/
     padding: 50px 0 40px 0;
 }
 @media (min-width: 768px) {
@@ -180,6 +180,7 @@ button.navbar-toggle:hover, button.navbar-toggle:active, button.navbar-toggle:fo
         height: calc(100vh - 70px);
         min-height: 768px;
         margin: 0px 0 0px 0;
+        
     }
 }
 .jumbotron h1 {
@@ -254,6 +255,12 @@ div.ill-main {
     transition: 0.3s;
     overflow: auto;
 }
+@media (max-width: 767px) {
+    .highlights-container {
+        margin-top: 70vw;
+    }
+}
+
 .highlights:hover {
     background: white;
     box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
@@ -587,4 +594,70 @@ a.carousel-control:hover .glyphicon {
     .footer .app-download {
         margin-left: auto;
     }
+}
+
+
+/*VIDEO PLAYER */
+.video-container {
+    position: absolute;
+    left: 0;
+    margin: 0px auto;
+    width: 100vw;
+    /*border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.2);*/
+}
+
+.plyr {
+    border-radius: 20px;
+    box-shadow:  0px 3px 8px 4px rgba(0,0,0,0.0);
+    --plyr-color-main: #f9376c;
+    --plyr-video-controls-background: rgba(255, 255, 255, 0.8);
+    --plyr-video-control-color: #5A676B;
+    --plyr-video-progress-buffered-background: rgba(90,103,107,0.45);
+    --plyr-video-control-color-hover: rgba(90,103,107,0.8);
+    --plyr-video-control-background-hover: white;
+    
+}
+@media (min-width: 768px) {
+    
+}
+.video-border {
+    border-radius: 30px;
+    border: 10px solid white;
+    position: absolute;
+    top:-8px;left:-8px;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    pointer-events: none;
+    box-shadow: inset 0px 3px 12px 4px rgba(0,0,0,0.0);
+    
+}
+@media (min-width: 768px) {
+    .video-container {
+        position: relative;
+        margin: 100px auto;
+        width: 100%;
+        max-width: 85%;
+    }
+}
+
+/*.plyr--video .plyr__controls {
+    background: linear-gradient(rgba(255, 0, 0, 0), rgba(255, 255, 255, 0.75));
+}
+.plyr--plyr-color-main {
+    color: red;
+}*/
+.plyr--video .plyr__controls {
+    padding-top: 9px;
+}
+.plyr button {
+    border-radius: 1000px;
+}
+.plyr__controls .plyr__controls__item:first-child svg {
+    margin-left: 2px;
+    margin-right: -2px;
+}
+.plyr.plyr__control svg;
+    background-color: white;
 }

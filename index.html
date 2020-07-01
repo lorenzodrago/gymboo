@@ -5,6 +5,7 @@
     <link rel="icon" href="favicon-b.png" type="image/png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gymboo - Come in palestra, con i tuoi amici</title>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -50,7 +51,14 @@
         </div>
     </div>
     <div class="container first">
-        <div class="row">
+        <div class="video-container">
+        <video id="player" playsinline controls data-poster="assets/video-preview-09.png">
+            <source src="assets/video-min.mp4" type="video/mp4" />
+            <source src="assets/video-min.webm" type="video/webm" />
+        </video>
+        <div class="video-border"></div>
+        </div>
+        <div class="row highlights-container">
             <div class="highlights col-sm-6">
             <img src="assets/illustrations-06.png">
                 <div class="description">
@@ -225,7 +233,17 @@
         </div>
     </div>
 
+
+<script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
 <script src="script.js"></script>
+<script>
+  const player = new Plyr('#player', {
+      title: 'Introduzione a Gymboo',
+      controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+  });
+   
+    
+</script>
 </body>
 
 </html>

@@ -619,9 +619,7 @@ a.carousel-control:hover .glyphicon {
     --plyr-video-control-background-hover: white;
     
 }
-@media (min-width: 768px) {
-    
-}
+
 .video-border {
     border-radius: 30px;
     border: 10px solid white;
@@ -632,6 +630,14 @@ a.carousel-control:hover .glyphicon {
     pointer-events: none;
     box-shadow: inset 0px 3px 12px 4px rgba(0,0,0,0.0);
     
+}
+@media (max-width: 767px) {
+    .video-border {
+        display:none;
+    }
+    .plyr {
+        border-radius: 0;
+    }
 }
 @media (min-width: 768px) {
     .video-container {
